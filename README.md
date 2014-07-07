@@ -18,6 +18,11 @@ A helper utility that compiles a single [EJS](https://github.com/visionmedia/ejs
     ejs-build ./context.json < ./template.ejs
     ejs-build settings < ./template.ejs
     ejs-build ./config.js < ./template.ejs
+    ejs-build ./config.coffee < ./template.ejs
+
+## CoffeeScript Support
+
+`ejs-build` will try to `require('coffee-script/register')` from the `cwd`, eg it will try to use the CoffeeScript module that you might have installed in the same folder from which `ejs-build` is executed.
 
 ## Testing
 

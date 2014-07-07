@@ -6,10 +6,20 @@ require 'coffee-errors'
 describe 'ejs-build', ->
   output = null
 
-  before (done) ->
-    exec "./ejs-build.js ./test/context.json < ./test/template.ejs", (err, stdout, stderr) ->
-      output = stdout
-      done err
+  describe 'json config', ->
+    before (done) ->
+      exec './ejs-build.js ./test/context.json < ./test/template.ejs', (err, stdout, stderr) ->
+        output = stdout
+        done err
 
-  it "generates output", ->
-    expect(output).to.eql "Hello world!"
+    it 'generates output', ->
+      expect(output).to.eql 'Hello world!'
+
+  describe 'coffee config', ->
+    before (done) ->
+      exec './ejs-build.js ./test/context.coffee < ./test/template.ejs', (err, stdout, stderr) ->
+        output = stdout
+        done err
+
+    it 'generates output', ->
+      expect(output).to.eql 'Hello world!'
