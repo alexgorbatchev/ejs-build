@@ -1,0 +1,33 @@
+{
+  "name": "ejs-build",
+  "version": "1.0.0",
+  "main": "./lib/ejs-build.js",
+  "description": "Compiles a passed in EJS template with a supplied context object and spits out results.",
+  "bin": {
+    "ejs-build": "./ejs-build.js"
+  },
+  "keywords": [
+    "ejs",
+    "build",
+    "template",
+    "context"
+  ],
+  "scripts": {
+    "pretest": "coffee --output lib --bare src/ejs-build.coffee",
+    "test": "mocha 'test/**/*.spec.coffee'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:alexgorbatchev/ejs-build.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "coffee-errors": "^0.8.5",
+    "coffee-script": "^1.7.1",
+    "mocha": "^1.20.1"
+  },
+  "dependencies": {
+    "ejs": "^1.0.0"
+  }
+}
