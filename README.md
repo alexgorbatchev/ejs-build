@@ -7,7 +7,7 @@
 
 [![NPM](https://nodei.co/npm/ejs-build.svg)](https://npmjs.org/package/ejs-build)
 
-A helper utility that compiles a single [EJS](https://github.com/visionmedia/ejs) template using specified module or file. The template is loaded via STDIN and compiled results are sent back to STDOUT.
+A helper utility that compiles a single [EJS](https://github.com/visionmedia/ejs) template using specified module or file. The template is loaded via STDIN and compiled results are sent back to STDOUT. This is useful for dynamically building JavaScript files using some sort of settings module.
 
 ## Installation
 
